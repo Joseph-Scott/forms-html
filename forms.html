@@ -10,7 +10,6 @@
     <h1>Forms Demo</h1>
 
     <form action="tacos">
-      <button type="button">PLEASE DO NOT SUBMIT THE FORM</button>
       <p>
         <label for="username">Enter a Username:</label>
         <input
@@ -34,15 +33,36 @@
         <input type="color" id="color" name="color" />
       </p>
       <p>
-        <label for="number">Enter a Number:</label>
-        <input
-          type="number"
-          placeholder="Enter a number"
-          id="number"
-          name="num"
-        />
+        <!-- Alternative way to label an input (less common) -->
+        <label>
+          Enter a Number:
+          <input type="number" placeholder="Enter a number" name="num" />
+        </label>
       </p>
+      <!-- this button doesn't submit the form b/c of the "type" attribute -->
+      <button type="button">Regular button (won't submit)</button>
+      <!-- This button submits the form! -->
       <button>Submit</button>
+      <!-- So does this one: -->
+      <input type="submit" value="Click Me!" />
+    </form>
+    <hr />
+    <!-- Outside of a form, no default behavior -->
+    <button>Not Inside Form</button>
+
+    <form action="https://www.reddit.com/search">
+      <input type="text" name="q" />
+      <button>Search Reddit</button>
+    </form>
+
+    <form action="https://www.google.com/search">
+      <input type="text" name="q" />
+      <button>Search Google</button>
+    </form>
+
+    <form action="https://www.youtube.com/results">
+      <input type="text" name="search_query" />
+      <button>Search YouTube</button>
     </form>
   </body>
 </html>
